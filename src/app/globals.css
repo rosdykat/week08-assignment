@@ -42,4 +42,13 @@ body {
   padding: 2rem;
 }
 
+.postsBox {
+  width: 90%;
+}
+
+.posts {
+  border: 1px dashed purple;
+  margin: 1rem;
+}
+
 /* You can also have CSS modules to style your components */
