@@ -1,0 +1,9 @@
+.footer {
+  grid-area: 3 / 2 / span 1 / span 1;
+  border: 1px dashed red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}

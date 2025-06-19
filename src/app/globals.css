@@ -23,4 +23,23 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  height: 100vh;
+  width: auto;
 }
+
+.main {
+  grid-area: 2 / 2 / span 1 / span 1;
+  background-color: white;
+  border: 3px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding: 2rem;
+}
+
+/* You can also have CSS modules to style your components */
