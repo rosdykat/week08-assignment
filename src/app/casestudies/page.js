@@ -19,7 +19,7 @@ export default async function CaseStudiesPage() {
             </Link>
             {/* <p>{post.post}</p> */}
             <Link href={`/casestudies/tags/${tag.tag}`}>
-              <p className="border border-dashed border-black w-fit px-5">
+              <p className="border border-dashed border-black w-fit px-5 hover:[background-color:#bae8e8]">
                 {tag.tag}
               </p>
             </Link>

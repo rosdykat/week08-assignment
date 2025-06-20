@@ -30,7 +30,7 @@ export default async function TagsPage({ params }) {
       {posts.map((post) => (
         <div className="caseStudyBox" key={post.id}>
           <Link href={`/casestudies/post/${post.id}`}>
-            <p>{post.title}</p>
+            <p className= "hover:[background-color:#bae8e8]">{post.title}</p>
           </Link>
         </div>
       ))}
