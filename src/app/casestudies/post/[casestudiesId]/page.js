@@ -13,19 +13,22 @@ export default async function CaseStudiesIdPage({ params }) {
   const query = await db.query(`SELECT * FROM case_study WHERE id = $1`, [
     idParams,
   ]);
+  const caseStudyData = query.rows
+
+    const comments = await db.query(`SELECT * FROM comment_form WHERE location=$1`,[idParams]);
 
   //storing the query data as casestudyData
-  const casestudyData = query.rows;
+  const commentData = comments.rows;
 
   // renders
   return (
     <>
       {/* matching the casestudyData with my local data where the post id matches images local id */}
-      {casestudyData.map((post) => {
+      {caseStudyData.map((post) => {
         const localImage = data.find((img) => img.id === post.id);
         return (
           <div key={post.id} className="postAndComments">
-            <div className="caseStudyBox" key={post.id}>
+            <div className="caseStudyBox m-4" key={post.id}>
               {/* rendering relevant supabase data */}
               <h1 className="text-3xl">{post.title}</h1>
               {/* rendering image */}
@@ -38,10 +41,19 @@ export default async function CaseStudiesIdPage({ params }) {
               />
               <h2 className="text-xl">{post.post}</h2>
             </div>
-            <CommentForm />
+            <div className="commentBox">
+                        {commentData.map((comment) => (
+        <div className="comments p-3" key={comment.id}>
+            <h1 className="font-bold">{comment.name}</h1>
+            <p>{comment.comment}</p>
+        </div>
+      ))}
+      </div>
+            <CommentForm location={idParams}/>
           </div>
         );
       })}
     </>
+    
   );
 }
