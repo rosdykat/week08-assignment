@@ -52,7 +52,7 @@ body {
 }
 
 .postsBox {
-  width: 90%;
+  width: 900%;
 }
 
 .posts {
@@ -72,6 +72,29 @@ body {
   border: 2px dashed black;
   box-shadow: 10px 10px;
   padding: 1rem;
+}
+
+.postAndComments {
+  width: 90%;
+}
+
+.commentForm {
+  margin-bottom: 5%;
+  border: 1px dashed;
+  box-shadow: 10px 10px;
+  padding: 1rem;
+  background-color: #bae8e8;
+  border-bottom-right-radius: 20px;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* You can also have CSS modules to style your components */
