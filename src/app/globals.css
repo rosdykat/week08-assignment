@@ -97,4 +97,18 @@ body {
   border-radius: 10px;
 }
 
+.commentBox {
+background-color: #bae8e8;
+border: 2px dashed black;
+box-shadow: 10px 10px;
+height: 10rem;
+overflow-x: auto;
+padding: 10px;
+}
+
+.comments {
+background-color: rgb(255, 255, 136);
+margin: 10px;
+}
+
 /* You can also have CSS modules to style your components */
