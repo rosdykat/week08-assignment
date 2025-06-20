@@ -48,6 +48,7 @@ body {
   padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  overflow-x: auto;
 }
 
 .postsBox {
@@ -58,6 +59,17 @@ body {
   border: 2px dashed black;
   margin: 1rem;
   background-color: rgb(255, 255, 136);
+  box-shadow: 10px 10px;
+  padding: 1rem;
+}
+
+.caseStudyBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 136);
+  border: 2px dashed black;
   box-shadow: 10px 10px;
   padding: 1rem;
 }
