@@ -1,26 +1,44 @@
+// imports
 import { db } from "@/app/utils/dbConnection";
+import data from "@/lib/data";
+import Image from "next/image";
 
 export default async function CaseStudiesIdPage({ params }) {
-  const idParams = await params.casestudiesId;
+  // Getting the ID from the URL - awaitParams removes and error lol
+  const awaitParams = await params;
+  const idParams = await awaitParams.casestudiesId;
 
-  //query our db
+  //query our db --> selecting everything from the database that matches the ID of the URL
   const query = await db.query(`SELECT * FROM case_study WHERE id = $1`, [
     idParams,
   ]);
 
-  const casestudyData = query.rows; //this is an array, each column is an object
+  //storing the query data as casestudyData
+  const casestudyData = query.rows;
+
+  // renders
   return (
     <>
       <h1>This is the Case Study page!</h1>
-      {casestudyData.map((post) => (
-        <div key={post.id}>
-          <h2>{`title: ${post.title}`}</h2>
-          <h2>{`post: ${post.post}`}</h2>
-        </div>
-      ))}
+      {/* matching the casestudyData with my local data where the post id matches images local id */}
+      {casestudyData.map((post) => {
+        const localImage = data.find((img) => img.id === post.id);
+        return (
+          <div key={post.id}>
+            {/* rendering relevant supabase data */}
+            <h2>{`title: ${post.title}`}</h2>
+            <h2>{`post: ${post.post}`}</h2>
+            {/* rendering image */}
+            <Image src={localImage?.src} alt="test" width={500} height={500} />
+          </div>
+        );
+      })}
     </>
   );
 }
+
+// Store the images in the public folder
+// Store images data in the lib folder
 
 // import pg from "pg";
 

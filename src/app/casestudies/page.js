@@ -15,10 +15,12 @@ export default async function CaseStudiesPage() {
         return (
           <div className="posts" key={post.id}>
             <Link href={`/casestudies/${post.id}`}>
-              <p>{post.title}</p>
+              <p className="title text-blue-800 ">{post.title}</p>
             </Link>
-            <p>{post.post}</p>
-            <p>{tag.tag}</p>
+            {/* <p>{post.post}</p> */}
+            <p className="border border-dashed border-black w-fit px-5">
+              {tag.tag}
+            </p>
           </div>
         );
       })}
