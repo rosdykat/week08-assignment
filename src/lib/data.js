@@ -9,6 +9,18 @@ const data = [
     id: 4,
     src: "/images/ahscollagen.jpg",
   },
+  {
+    id: 5,
+    src: "/images/ahscollagen.jpg",
+  },
+  {
+    id: 9,
+    src: "/images/ahscollagen.jpg",
+  },
+  {
+    id: 10,
+    src: "/images/ahscollagen.jpg",
+  },
 ];
 
 export default data;

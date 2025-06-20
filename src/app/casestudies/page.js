@@ -14,13 +14,15 @@ export default async function CaseStudiesPage() {
         const tag = tags.find((tag) => tag.id === post.tag_id);
         return (
           <div className="posts" key={post.id}>
-            <Link href={`/casestudies/${post.id}`}>
+            <Link href={`/casestudies/post/${post.id}`}>
               <p className="title text-blue-800 ">{post.title}</p>
             </Link>
             {/* <p>{post.post}</p> */}
-            <p className="border border-dashed border-black w-fit px-5">
-              {tag.tag}
-            </p>
+            <Link href={`/casestudies/tags/${tag.tag}`}>
+              <p className="border border-dashed border-black w-fit px-5">
+                {tag.tag}
+              </p>
+            </Link>
           </div>
         );
       })}
