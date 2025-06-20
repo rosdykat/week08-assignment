@@ -1,12 +1,17 @@
 .link {
   color: darkblue;
+  border: 2px dashed black;
+  padding: 1rem;
+  background-color: #bae8e8;
 }
 
 .nav {
   grid-area: 1 / 2 / span 1 / span 1;
-  border: 1px dashed red;
+  border: 2px dashed black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  background-color: white;
+  box-shadow: 10px 10px;
 }

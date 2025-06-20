@@ -29,17 +29,25 @@ body {
   grid-template-rows: 1fr 3fr 1fr;
   height: 100vh;
   width: auto;
+
+  color: #272343;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
 .main {
   grid-area: 2 / 2 / span 1 / span 1;
   background-color: white;
-  border: 3px solid red;
+  border: 2px dashed black;
+  box-shadow: 10px 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
   padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .postsBox {
@@ -47,8 +55,11 @@ body {
 }
 
 .posts {
-  border: 1px dashed purple;
+  border: 2px dashed black;
   margin: 1rem;
+  background-color: rgb(255, 255, 136);
+  box-shadow: 10px 10px;
+  padding: 1rem;
 }
 
 /* You can also have CSS modules to style your components */

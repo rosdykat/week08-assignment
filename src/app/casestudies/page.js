@@ -1,5 +1,6 @@
 import { db } from "../utils/dbConnection";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function CaseStudiesPage() {
   const post = (await db.query(`SELECT * FROM case_study`)).rows;
@@ -13,7 +14,9 @@ export default async function CaseStudiesPage() {
         const tag = tags.find((tag) => tag.id === post.tag_id);
         return (
           <div className="posts" key={post.id}>
-            <p>{post.title}</p>
+            <Link href={`/casestudies/${post.id}`}>
+              <p>{post.title}</p>
+            </Link>
             <p>{post.post}</p>
             <p>{tag.tag}</p>
           </div>
