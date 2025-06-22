@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: baseline;
   padding: 2rem;
-  padding-top: 15%;
+  padding-top: 25%;
   margin-top: 1rem;
   /* margin-bottom: 1rem; */
   overflow-x: auto;
@@ -129,6 +129,43 @@ padding: 10px;
 .comments {
 background-color: rgb(255, 255, 136);
 margin: 10px;
+
 }
 
-/* You can also have CSS modules to style your components */
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  grid-area: 2 / 2 / span 1 / span 1;
+  border: 1px dashed black;
+  padding-top: 1rem;
+  margin-top: -60px;
+  width: 80%;
+  height: 100%;
+}
+
+/* mobile css */
+
+@media screen and (max-width: 900px) {
+.main {
+/* padding-top: 200px; */
+margin-top: 200px;
+padding: 1rem;
+}
+
+.body{
+margin-top: 1rem;
+width: 100%;
+}
+} 
+
+/* Mobile/ipad css */
+
+/* @media screen and (max-width: 900px) {
+.main {
+padding-top: 200px;
+}
+
+
+}  */
