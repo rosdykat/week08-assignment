@@ -16,7 +16,7 @@
   /* background-color: white; */
   /* box-shadow: 10px 10px; */
   width: 50%;
-  margin: 0 auto;
+  margin: 30px auto;
   z-index: 2;
 }
 
@@ -27,4 +27,11 @@ background-color: #9ed2d2;
 box-sizing: border-box; */
 /* box-shadow: 5px 5px; */
 color: black;
+}
+
+@media screen and (max-width: 900px) {
+.nav {
+width: auto;
+margin-top: 0px;
+}
 }
