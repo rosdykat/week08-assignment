@@ -55,7 +55,7 @@ body {
   align-items: baseline;
   padding: 2rem;
   padding-top: 25%;
-  margin-top: 1rem;
+  /* margin-top: 2rem; */
   /* margin-bottom: 1rem; */
   overflow-x: auto;
   /* border-radius: 20px; */
@@ -91,11 +91,13 @@ color: black;
   background-color: rgb(255, 255, 136);
   border: 2px dashed black;
   box-shadow: 10px 10px;
-  padding: 1rem;
+  /* padding: 1rem; */
+  margin-top: -50px;
 }
 
 .postAndComments {
   width: 90%;
+  /* margin-top: 100px; */
 }
 
 .commentForm {
@@ -140,7 +142,7 @@ margin: 10px;
   grid-area: 2 / 2 / span 1 / span 1;
   border: 1px dashed black;
   padding-top: 1rem;
-  margin-top: -60px;
+  /* margin-top: -60px; */
   width: 80%;
   height: 100%;
 }
@@ -162,10 +164,10 @@ width: 100%;
 
 /* Mobile/ipad css */
 
-/* @media screen and (max-width: 900px) {
-.main {
-padding-top: 200px;
+@media screen and (max-width: 1600px) {
+.body {
+margin-top: .5rem;
 }
 
 
-}  */
+} 
