@@ -2,11 +2,7 @@ import { revalidatePath } from "next/cache";
 import { db } from "../utils/dbConnection";
 import FormStyles from "@/app/Components/commentform.module.css";
 
-export default function CommentForm(props) {
-  const casestudiesId = props.location;
-  console.log(casestudiesId);
-
-  async function handleSubmit(formData) {
+async function handleSubmit(formData) {
     "use server";
 
       const name= formData.get("name")
@@ -21,6 +17,10 @@ export default function CommentForm(props) {
     // revalidate path here
   revalidatePath(`/casestudies/${location}`);
   }
+
+export default function CommentForm(props) {
+  const casestudiesId = props.location;
+  console.log(casestudiesId);
 
   return (
     <div className="commentForm m-10">
