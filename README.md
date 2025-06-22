@@ -56,15 +56,12 @@ For the website, I liked the idea of having all the children routes in the "main
 ![Wireframe](./public/images/Screenshot%202025-06-22%20200014.png)
 
 
+## Resources
 
+I struggled initially with dynamic routes when going to routes with spaces. However I think I came to a resolution without this 
 
 DecodeURI:
 
 https://stackoverflow.com/questions/66270207/next-js-how-can-i-make-dynamic-routes-with-spaces-work
 
 https://stackoverflow.com/questions/69811308/how-to-decode-a-url-in-javascript-or-nextjs
-
-
-## Resources
-
-TBA
